@@ -1,4 +1,3 @@
-
 -- Relative line numbers
 vim.opt.nu = true
 vim.opt.relativenumber = true
@@ -34,3 +33,13 @@ vim.opt.scrolloff = 8
 -- Add a vertical column at n char
 vim.opt.colorcolumn = "80"
 
+-- Show whitespaces
+vim.opt.listchars:append {
+    tab = "--",
+    space = "·",
+    lead = "·",
+    trail = "·",
+    nbsp = "·"
+}
+
+vim.opt.list = true
