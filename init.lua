@@ -1,0 +1,3 @@
+require("vfries");
+
+print("hello");
