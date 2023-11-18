@@ -1,3 +1,2 @@
-require("vfries.remap")
-
-print("test")
+require("vfries.keymaps")
+require("vfries.set")
