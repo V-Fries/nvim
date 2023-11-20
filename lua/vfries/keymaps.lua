@@ -9,6 +9,10 @@ vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("n", "<C-k>", "<C-u>zz")
 vim.keymap.set("n", "<C-j>", "<C-d>zz")
 
+-- Jump end/start of line
+vim.keymap.set("n", "<C-h>", "<S-^>")
+vim.keymap.set("n", "<C-l>", "<S-$>")
+
 -- Keep search terms in the middle
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
@@ -25,4 +29,3 @@ vim.keymap.set("n", "<leader>Y", "\"+Y")
 
 -- Replace all occurences of the word on cursor
 vim.keymap.set("n", "<leader>d", [[:%s/\<<C-r><C-w>\>//gI<Left><Left><Left>]])
-
