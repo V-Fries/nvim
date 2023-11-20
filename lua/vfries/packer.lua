@@ -70,11 +70,4 @@ return require('packer').startup(function(use)
     -- Auto saver
     use {"pocco81/auto-save.nvim"}
 
-    -- Tabs
-    -- These optional plugins should be loaded directly because of a bug in Packer lazy loading
-    use {'romgrk/barbar.nvim',
-        requires = {'lewis6991/gitsigns.nvim', -- OPTIONAL: for git status
-                    'nvim-tree/nvim-web-devicons', -- OPTIONAL: for file icons
-        }
-    }
 end)
