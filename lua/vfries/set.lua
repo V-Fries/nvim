@@ -34,12 +34,11 @@ vim.opt.scrolloff = 8
 vim.opt.colorcolumn = "80"
 
 -- Show whitespaces
-vim.opt.listchars:append {
-    tab = "--",
-    space = "·",
-    lead = "·",
-    trail = "·",
-    nbsp = "·"
-}
-
-vim.opt.list = true
+-- vim.opt.listchars:append {
+--     tab = "--",
+--     space = "·",
+--     lead = "·",
+--     trail = "·",
+--     nbsp = "·"
+-- }
+-- vim.opt.list = true
