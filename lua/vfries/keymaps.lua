@@ -29,3 +29,6 @@ vim.keymap.set("n", "<leader>Y", "\"+Y")
 
 -- Replace all occurences of the word on cursor
 vim.keymap.set("n", "<leader>d", [[:%s/\<<C-r><C-w>\>//gI<Left><Left><Left>]])
+
+-- Execute code
+vim.keymap.set("n", "<leader>x", "<Cmd>make run<CR>")
