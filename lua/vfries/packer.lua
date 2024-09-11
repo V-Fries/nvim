@@ -1,3 +1,18 @@
+-- Alias:
+---- vi () {
+---- 	(
+---- 		cd $1 &> /dev/null && nvim . || nvim $1
+---- 	)
+---- }
+
+-- Update:
+---- :so
+---- :PackerSync
+---- :checkhealth
+
+-- Install LSPs
+---- :Mason
+
 -- This file can be loaded by calling `lua require('plugins')` from your init.vim
 
 -- Only required if you have packer configured as `opt`
@@ -31,6 +46,7 @@ return require('packer').startup(function(use)
 
     -- git
     use('tpope/vim-fugitive')
+    use('lewis6991/gitsigns.nvim')
 
     -- Autocompletion
     use {
@@ -70,4 +86,7 @@ return require('packer').startup(function(use)
     -- Auto saver
     use {"pocco81/auto-save.nvim"}
 
+    -- -- Auto close blocks
+    -- use {'jiangmiao/auto-pairs'}
+    --
 end)

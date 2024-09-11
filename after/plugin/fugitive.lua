@@ -1,9 +1,6 @@
-vim.keymap.set("n", "<leader>g", vim.cmd.Git)
+-- Keymaps
+--   =: see changes
+--   -: stage
 
-vim.keymap.set("n", "<leader>p", function()
-    vim.cmd.Git('push')
-end)
-
-vim.keymap.set("n", "<leader>l", function()
-    vim.cmd.Git('pull --rebase')
-end)
+vim.keymap.set("n", "<leader>gg", vim.cmd.Git)
+vim.keymap.set("n", "<leader>gc", vim.cmd.Gdiff)

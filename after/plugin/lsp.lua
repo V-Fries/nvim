@@ -15,8 +15,19 @@ end)
 require('mason').setup({})
 require('mason-lspconfig').setup({
     ensure_installed = {"clangd",
-                        "tsserver"},
+                        "rust_analyzer"},
+    automatic_installation = true,
     handlers = {
         lsp_zero.default_setup,
     },
 })
+
+require'lspconfig'.rust_analyzer.setup{
+    settings = {
+        ['rust-analyzer'] = {
+            check = {
+                command = "clippy"
+            }
+        }
+    }
+}

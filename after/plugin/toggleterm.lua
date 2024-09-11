@@ -1,4 +1,6 @@
-require("toggleterm").setup{}
+require("toggleterm").setup{
+    start_in_insert = false
+}
 
 function _G.set_terminal_keymaps()
     local opts = {buffer = 0}
@@ -15,4 +17,4 @@ end
 vim.cmd('autocmd! TermOpen term://* lua set_terminal_keymaps()')
 
 vim.keymap.set("n", "<leader>t",
-"<Cmd>ToggleTerm size=10 dir=. direction=horizontal name=project<CR>")
+"<Cmd>ToggleTerm size=12 dir=. direction=horizontal name=project<CR>")
