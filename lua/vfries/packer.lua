@@ -29,13 +29,10 @@ return require('packer').startup(function(use)
         requires = { {'nvim-lua/plenary.nvim'} }
     }
 
-    -- theme
-    use({
-        'rose-pine/neovim',
-        as = 'rose-pine',
-        config = function()
-            vim.cmd('colorscheme rose-pine')
-        end
+    -- Github theme
+    use ({
+        'projekt0n/github-nvim-theme',
+        as = 'github-theme'
     })
 
     -- Syntax highlighting
@@ -85,6 +82,34 @@ return require('packer').startup(function(use)
 
     -- Auto saver
     use {"pocco81/auto-save.nvim"}
+
+    -- status line
+    use {
+        'nvim-lualine/lualine.nvim',
+        requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+    }
+
+    -- Cursor line
+    use { 'nyngwang/murmur.lua' }
+
+    -- command bar
+    use {
+        'folke/noice.nvim',
+        requires = {
+            -- if you lazy-load any plugin below, make sure to add proper `module='...'` entries
+            'MunifTanjim/nui.nvim',
+            -- OPTIONAL:
+            --   `nvim-notify` is only needed, if you want to use the notification view.
+            --   If not available, we use `mini` as the fallback
+            -- 'rcarriga/nvim-notify',
+        }
+    }
+
+    -- zen mode
+    -- Lua
+    use {
+        'folke/zen-mode.nvim',
+    }
 
     -- -- Auto close blocks
     -- use {'jiangmiao/auto-pairs'}

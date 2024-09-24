@@ -1,9 +1,10 @@
-require('rose-pine').setup({
-    disable_background = true
+require('github-theme').setup({
+    options = {
+        transparent = true,
+        -- backgroud should be #1e1e1e
+    },
 })
 
-color = color or "rose-pine"
-vim.cmd.colorscheme(color)
+vim.cmd.colorscheme('github_dark_default')
 
-vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+vim.cmd('highlight CursorLine guibg=#303030')

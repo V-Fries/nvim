@@ -29,7 +29,9 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
 -- Jump half page with 
 vim.keymap.set("n", "<C-k>", "<C-u>zz")
+vim.keymap.set("v", "<C-k>", "<C-u>zz")
 vim.keymap.set("n", "<C-j>", "<C-d>zz")
+vim.keymap.set("v", "<C-j>", "<C-d>zz")
 
 -- Keep search terms in the middle
 vim.keymap.set("n", "n", "nzzzv")
@@ -42,12 +44,13 @@ vim.keymap.set("x", "p", [["_dp]])
 vim.keymap.set("n", "<leader>y", "\"+y")
 vim.keymap.set("v", "<leader>y", "\"+y")
 vim.keymap.set("n", "<leader>Y", "\"+Y")
+vim.keymap.set("v", "<leader>Y", "\"+Y")
 
 -- Replace all occurences of the word on cursor
 vim.keymap.set("n", "<leader>d", [[:%s/\<<C-r><C-w>\>//gI<Left><Left><Left>]])
 
 -- Execute code
-vim.keymap.set("n", "<leader>x", "<Cmd>! make run_debug<CR>")
+vim.keymap.set("n", "<leader>xt", "<Cmd>!cargo test<CR>")
 
 -- Go to previous error
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev)
@@ -58,9 +61,9 @@ vim.keymap.set('n', ']d', vim.diagnostic.goto_next)
 vim.keymap.set('n', "<leader>L", "<C-w>v<C-w>l")
 -- split bottom
 vim.keymap.set('n', "<leader>J", "<C-w>s<C-w>j")
--- split right
+-- split left
 vim.keymap.set('n', "<leader>H", "<C-w>v")
--- split bottom
+-- split top
 vim.keymap.set('n', "<leader>K", "<C-w>s")
 
 vim.keymap.set('n', "<C-+>", ":resize +1<CR>")
