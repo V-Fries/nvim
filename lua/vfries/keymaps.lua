@@ -82,6 +82,8 @@ vim.keymap.set('n', "<leader>k", "<C-w>k")
 
 -- close tab
 vim.keymap.set('n', "<leader>w", "<Cmd>q<CR>")
+-- close vim
+vim.keymap.set('n', "<leader>q", "<Cmd>qa<CR>")
 
 -- Highlight when copying text
 vim.api.nvim_create_autocmd("TextYankPost", {

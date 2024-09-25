@@ -17,4 +17,5 @@ end
 vim.cmd('autocmd! TermOpen term://* lua set_terminal_keymaps()')
 
 vim.keymap.set("n", "<leader>t",
-"<Cmd>ToggleTerm size=12 dir=. direction=horizontal name=project<CR>")
+    "<Cmd>ToggleTerm dir=. direction=float name=project<CR>"
+)

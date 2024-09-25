@@ -1,6 +1,6 @@
 require('murmur').setup {
     cursor_rgb = {
-        guibg = '#343e34',
+        guibg = '#344134',
     },
     -- cursor_rgb_always_use_config = false, -- if set to `true`, then always use `cursor_rgb`.
     -- yank_blink = {
@@ -33,7 +33,7 @@ vim.api.nvim_create_autocmd('CursorHold', {
             local buf = vim.diagnostic.open_float({
                 scope = "cursor",
                 -- Only close the window on InsertEnter and the explicit diagnostic close event
-                close_events = { "InsertEnter", "User MurmurDiagnostics" },
+                close_events = { "InsertEnter", "User" }, -- MurmurDiagnostics" },
             })
             -- If the window closes for any reason *other* than it being closed by a callback,
             -- make it triggerable again

@@ -1,4 +1,4 @@
-local my_colors = { bg = '#1e1e1e', fg = '#ffffff', gui = 'bold' }
+local my_colors = { bg = '#1e1e1e', fg = '#999999', gui = 'bold' }
 
 local my_theme = {
     normal = {

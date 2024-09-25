@@ -29,12 +29,6 @@ return require('packer').startup(function(use)
         requires = { {'nvim-lua/plenary.nvim'} }
     }
 
-    -- Github theme
-    use ({
-        'projekt0n/github-nvim-theme',
-        as = 'github-theme'
-    })
-
     -- Syntax highlighting
     use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
 
@@ -48,7 +42,7 @@ return require('packer').startup(function(use)
     -- Autocompletion
     use {
         'VonHeikemen/lsp-zero.nvim',
-        branch = 'v3.x',
+        branch = 'v4.x',
         requires = {
             --- Uncomment these if you want to manage LSP servers from neovim
             {'williamboman/mason.nvim'},
@@ -67,7 +61,7 @@ return require('packer').startup(function(use)
     use {
         "nvim-neo-tree/neo-tree.nvim",
         branch = "v3.x",
-        requires = { 
+        requires = {
             "nvim-lua/plenary.nvim",
             "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
             "MunifTanjim/nui.nvim",
@@ -91,19 +85,6 @@ return require('packer').startup(function(use)
 
     -- Cursor line
     use { 'nyngwang/murmur.lua' }
-
-    -- command bar
-    use {
-        'folke/noice.nvim',
-        requires = {
-            -- if you lazy-load any plugin below, make sure to add proper `module='...'` entries
-            'MunifTanjim/nui.nvim',
-            -- OPTIONAL:
-            --   `nvim-notify` is only needed, if you want to use the notification view.
-            --   If not available, we use `mini` as the fallback
-            -- 'rcarriga/nvim-notify',
-        }
-    }
 
     -- zen mode
     -- Lua

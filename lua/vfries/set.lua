@@ -28,17 +28,22 @@ vim.opt.incsearch = true
 vim.opt.termguicolors = true
 
 -- Never have the cursor at the edge of the screen
-vim.opt.scrolloff = 8
+vim.opt.scrolloff = 5
 
 -- Make lines after file content be empty
 vim.opt.fillchars = { eob = " " }
 
 -- Cursor line
-vim.cmd('highlight CursorLine guibg=#303030')
 vim.opt.cursorline = true
 
+-- Set the time (in milliseconds) after which the CursorHold event is triggered
+vim.o.updatetime = 500
+
 -- Add a vertical column at n char
--- vim.opt.colorcolumn = "80"
+vim.opt.colorcolumn = "80"
+
+
+vim.cmd'colorscheme riescent'
 
 -- Show whitespaces
 -- vim.opt.listchars:append {

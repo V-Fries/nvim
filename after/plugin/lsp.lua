@@ -9,13 +9,16 @@ lsp_zero.on_attach(function(client, bufnr)
     local opts = {buffer = bufnr, remap = false}
     vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, opts)
 
-
 end)
 
-require('mason').setup({})
+require('mason').setup()
 require('mason-lspconfig').setup({
-    ensure_installed = {"clangd",
-                        "rust_analyzer"},
+    ensure_installed = {
+        "clangd",
+        "rust_analyzer",
+        "lua_ls",
+        "glsl_analyzer",
+    },
     automatic_installation = true,
     handlers = {
         lsp_zero.default_setup,
