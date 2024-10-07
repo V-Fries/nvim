@@ -28,7 +28,7 @@ require("zen-mode").setup {
             showcmd = false, -- disables the command in the last line of the screen
             -- you may turn on/off statusline in zen mode by setting 'laststatus' 
             -- statusline will be shown only if 'laststatus' == 3
-            laststatus = 0, -- turn off the statusline in zen mode
+            laststatus = 3,
         },
         twilight = { enabled = true }, -- enable to start Twilight when zen mode opens
         gitsigns = { enabled = false }, -- disables git signs
@@ -79,27 +79,34 @@ require("zen-mode").setup {
 
     -- callback where you can add custom code when the Zen window closes
     on_close = function()
-        local nb_of_buffers = #vim.tbl_filter(function(buf) return vim.fn.buflisted(buf) == 1 and vim.fn.bufwinnr(buf) ~= -1 end, vim.api.nvim_list_bufs())
-        local current_buf = vim.api.nvim_get_current_buf() 
-        local nb_of_times_current_buffer_is_open = #vim.fn.win_findbuf(current_buf)
-        if nb_of_buffers <= 1 and nb_of_times_current_buffer_is_open <= 1 then
-            vim.cmd('wqa')
-        end
+        -- local nb_of_buffers = #vim.tbl_filter(function(buf) return vim.fn.buflisted(buf) == 1 and vim.fn.bufwinnr(buf) ~= -1 end, vim.api.nvim_list_bufs())
+        -- local current_buf = vim.api.nvim_get_current_buf() 
+        -- local nb_of_times_current_buffer_is_open = #vim.fn.win_findbuf(current_buf)
+        -- if nb_of_buffers <= 1 and nb_of_times_current_buffer_is_open <= 1 then
+        --     vim.cmd('wqa')
+        -- end
     end,
 }
 
 vim.keymap.set("n", "<leader>z", ":ZenMode<CR>")
 
-vim.api.nvim_create_autocmd("CursorMoved", {
-    pattern = "*",
-    callback = function()
-        local nb_of_buffers = #vim.tbl_filter(function(buf) return vim.fn.buflisted(buf) == 1 and vim.fn.bufwinnr(buf) ~= -1 end, vim.api.nvim_list_bufs())
-        local current_buf = vim.api.nvim_get_current_buf() 
-        local current_buffer_is_listed = vim.fn.buflisted(current_buf) == 1
-        local nb_of_times_current_buffer_is_open = #vim.fn.win_findbuf(current_buf)
-
-        if nb_of_buffers == 1 and current_buffer_is_listed and nb_of_times_current_buffer_is_open == 1 then
-            vim.cmd('ZenMode')
-        end
-    end,
-})
+-- vim.api.nvim_create_autocmd("CursorMoved", {
+--     pattern = "*",
+--     callback = function()
+--         local nb_of_buffers = #vim.tbl_filter(
+--             function(buf)
+--                 return vim.fn.buflisted(buf) == 1 and vim.fn.bufwinnr(buf) ~= -1
+--             end,
+--             vim.api.nvim_list_bufs()
+--         )
+--         local current_buf = vim.api.nvim_get_current_buf()
+--         local current_buffer_is_listed = vim.fn.buflisted(current_buf) == 1
+--         local nb_of_times_current_buffer_is_open = #vim.fn.win_findbuf(current_buf)
+--
+--         if nb_of_buffers == 1
+--                 and current_buffer_is_listed
+--                 and nb_of_times_current_buffer_is_open == 1 then
+--             vim.cmd('ZenMode')
+--         end
+--     end,
+-- })

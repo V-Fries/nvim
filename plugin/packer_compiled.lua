@@ -159,6 +159,11 @@ _G.packer_plugins = {
     path = "/Users/vincent/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
+  ["spelunker.vim"] = {
+    loaded = true,
+    path = "/Users/vincent/.local/share/nvim/site/pack/packer/start/spelunker.vim",
+    url = "https://github.com/kamykn/spelunker.vim"
+  },
   ["telescope.nvim"] = {
     loaded = true,
     path = "/Users/vincent/.local/share/nvim/site/pack/packer/start/telescope.nvim",
@@ -179,6 +184,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/vincent/.local/share/nvim/site/pack/packer/start/vim-fugitive",
     url = "https://github.com/tpope/vim-fugitive"
+  },
+  ["vim-visual-multi"] = {
+    loaded = true,
+    path = "/Users/vincent/.local/share/nvim/site/pack/packer/start/vim-visual-multi",
+    url = "https://github.com/mg979/vim-visual-multi"
   },
   ["zen-mode.nvim"] = {
     loaded = true,

@@ -35,3 +35,9 @@
     @SmallerThan
     (#set! "priority" 105)
 )
+
+(
+    ["todo!"]
+    @TodoMacro.test
+    (#set! "priority" 105)
+)

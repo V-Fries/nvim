@@ -42,7 +42,7 @@ return require('packer').startup(function(use)
     -- Autocompletion
     use {
         'VonHeikemen/lsp-zero.nvim',
-        branch = 'v4.x',
+        branch = 'v3.x',
         requires = {
             --- Uncomment these if you want to manage LSP servers from neovim
             {'williamboman/mason.nvim'},
@@ -75,7 +75,7 @@ return require('packer').startup(function(use)
     end}
 
     -- Auto saver
-    use {"pocco81/auto-save.nvim"}
+    use 'pocco81/auto-save.nvim'
 
     -- status line
     use {
@@ -83,14 +83,20 @@ return require('packer').startup(function(use)
         requires = { 'nvim-tree/nvim-web-devicons', opt = true }
     }
 
-    -- Cursor line
-    use { 'nyngwang/murmur.lua' }
+    -- Word highlighting
+    use 'nyngwang/murmur.lua'
 
     -- zen mode
-    -- Lua
+    use 'folke/zen-mode.nvim'
+
+    -- Multicursor
     use {
-        'folke/zen-mode.nvim',
+        'mg979/vim-visual-multi',
+        branch = 'master'
     }
+
+    -- Spell checker
+    use 'kamykn/spelunker.vim'
 
     -- -- Auto close blocks
     -- use {'jiangmiao/auto-pairs'}

@@ -1,10 +1,15 @@
 require'nvim-treesitter.configs'.setup {
     -- A list of parser names, or "all" (the five listed parsers should always be installed)
-    -- Every thing before the empty line was added by me
-    ensure_installed = {"cmake", "cpp", "javascript", "make", "python",
-        "git_config", "git_rebase", "gitattributes", "gitcommit", "gitignore",
-
-        "c", "lua", "vim", "vimdoc", "query" },
+    -- I put all here because it took me way too long to find out about the comment parser
+    --      with all they will never again be a parser I'm missing
+    ensure_installed = "all", -- {
+    --     "cmake", "cpp", "javascript", "make", "python",
+    --     "git_config", "git_rebase", "gitattributes", "gitcommit", "gitignore",
+    --
+    --     Added by me:
+    --     "c", "lua", "vim", "vimdoc", "query",
+    --     "comment", -- for TODO syntax highlighting
+    -- },
 
     -- Install parsers synchronously (only applied to `ensure_installed`)
     sync_install = false,

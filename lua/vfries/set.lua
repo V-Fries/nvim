@@ -45,6 +45,8 @@ vim.opt.colorcolumn = "80"
 
 vim.cmd'colorscheme riescent'
 
+vim.cmd'set nospell'
+
 -- Show whitespaces
 -- vim.opt.listchars:append {
 --     tab = "--",

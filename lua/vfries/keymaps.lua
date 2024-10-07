@@ -47,7 +47,7 @@ vim.keymap.set("n", "<leader>Y", "\"+Y")
 vim.keymap.set("v", "<leader>Y", "\"+Y")
 
 -- Replace all occurences of the word on cursor
-vim.keymap.set("n", "<leader>d", [[:%s/\<<C-r><C-w>\>//gI<Left><Left><Left>]])
+-- vim.keymap.set("n", "<leader>d", [[:%s/\<<C-r><C-w>\>//gI<Left><Left><Left>]])
 
 -- Execute code
 vim.keymap.set("n", "<leader>xt", "<Cmd>!cargo test<CR>")
