@@ -100,4 +100,3 @@ vim.keymap.set('n', "<leader>b", "<C-6>")
 vim.keymap.set('n', "<leader>a", function()
     vim.lsp.buf.code_action()
 end)
-
