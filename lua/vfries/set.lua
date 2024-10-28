@@ -40,8 +40,7 @@ vim.opt.cursorline = true
 vim.o.updatetime = 500
 
 -- Add a vertical column at n char
-vim.opt.colorcolumn = "80"
-
+vim.opt.colorcolumn = "100"
 
 vim.cmd'colorscheme riescent'
 
@@ -56,3 +55,17 @@ vim.cmd'set nospell'
 --     nbsp = "·"
 -- }
 -- vim.opt.list = true
+
+vim.filetype.add({
+  extension = {
+        vert = "glsl",
+        tesc = "glsl",
+        tese = "glsl",
+        frag = "glsl",
+        geom = "glsl",
+        comp = "glsl",
+  }
+})
+
+-- Wrap lines that are too long
+vim.cmd'set wrap'

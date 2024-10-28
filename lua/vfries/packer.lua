@@ -42,7 +42,7 @@ return require('packer').startup(function(use)
     -- Autocompletion
     use {
         'VonHeikemen/lsp-zero.nvim',
-        branch = 'v3.x',
+        branch = 'v4.x',
         requires = {
             --- Uncomment these if you want to manage LSP servers from neovim
             {'williamboman/mason.nvim'},
@@ -53,7 +53,6 @@ return require('packer').startup(function(use)
             -- Autocompletion
             {'hrsh7th/nvim-cmp'},
             {'hrsh7th/cmp-nvim-lsp'},
-            {'L3MON4D3/LuaSnip'},
         }
     }
 
@@ -68,7 +67,7 @@ return require('packer').startup(function(use)
             -- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
         }
     }
-
+ 
     -- Terminal
     use {"akinsho/toggleterm.nvim", tag = '*', config = function()
         require("toggleterm").setup()
@@ -97,6 +96,8 @@ return require('packer').startup(function(use)
 
     -- Spell checker
     use 'kamykn/spelunker.vim'
+
+    -- use 'github/copilot.vim'
 
     -- -- Auto close blocks
     -- use {'jiangmiao/auto-pairs'}

@@ -27,7 +27,7 @@ vim.keymap.set("v", "jk", "<Esc>")
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
--- Jump half page with 
+-- Jump half page with
 vim.keymap.set("n", "<C-k>", "<C-u>zz")
 vim.keymap.set("v", "<C-k>", "<C-u>zz")
 vim.keymap.set("n", "<C-j>", "<C-d>zz")
@@ -99,4 +99,17 @@ vim.keymap.set('n', "<leader>b", "<C-6>")
 -- open code action
 vim.keymap.set('n', "<leader>a", function()
     vim.lsp.buf.code_action()
+end)
+
+vim.keymap.set('n', '<leader>rf', function()
+    if vim.bo.filetype ~= "rust" then
+        return
+    end
+    vim.cmd("write")
+    vim.fn.system("cargo fmt")
+    vim.cmd("edit")
+end)
+
+vim.keymap.set('n', '<leader>rc', function()
+    vim.cmd('!cargo clippy')
 end)

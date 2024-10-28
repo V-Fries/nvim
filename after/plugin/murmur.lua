@@ -8,7 +8,7 @@ require('murmur').setup {
         --   on_yank = nil, -- Can be customized. See `:h on_yank`.
     -- },
     max_len = 300,
-    min_len = 1,
+    min_len = 0,
     exclude_filetypes = {},
     callbacks = {
         -- to trigger the close_events of vim.diagnostic.open_float.

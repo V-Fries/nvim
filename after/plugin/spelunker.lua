@@ -1,3 +1,6 @@
+-- Zg: Add to dictionary
+-- Zl: Correct work under cursor
+
 -- Enable spelunker.vim. (default: 1)
 -- 1: enable
 -- 0: disable
