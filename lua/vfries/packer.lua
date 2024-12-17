@@ -56,18 +56,16 @@ return require('packer').startup(function(use)
         }
     }
 
-    -- File tree
+    -- File explorer
     use {
-        "nvim-neo-tree/neo-tree.nvim",
-        branch = "v3.x",
+        'simonmclean/triptych.nvim',
         requires = {
-            "nvim-lua/plenary.nvim",
-            "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
-            "MunifTanjim/nui.nvim",
-            -- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
-        }
+            'nvim-lua/plenary.nvim', -- required
+            'nvim-tree/nvim-web-devicons', -- optional for icons
+            'antosha417/nvim-lsp-file-operations' -- optional LSP integration
+        },
     }
- 
+
     -- Terminal
     use {"akinsho/toggleterm.nvim", tag = '*', config = function()
         require("toggleterm").setup()
