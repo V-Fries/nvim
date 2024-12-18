@@ -2,6 +2,12 @@ vim.keymap.set('n', '<leader>e', ':Triptych<CR>', { silent = true, desc = 'Toggl
 
 require('triptych').setup()
 
+require('triptych').setup({
+    options = {
+        show_hidden = true
+    }
+})
+
 require("lsp-file-operations").setup {
   -- used to see debug logs in file `vim.fn.stdpath("cache") .. lsp-file-operations.log`
   debug = false,

@@ -98,6 +98,6 @@ return require('packer').startup(function(use)
     -- use 'github/copilot.vim'
 
     -- -- Auto close blocks
-    -- use {'jiangmiao/auto-pairs'}
+    use {'jiangmiao/auto-pairs'}
     --
 end)
