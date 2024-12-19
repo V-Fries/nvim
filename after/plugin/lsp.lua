@@ -79,7 +79,7 @@ require('mason-lspconfig').setup({
         "glsl_analyzer",
         "zls"
     },
-    automatic_installation = true,
+    automatic_installation = false,
 
     handlers = {
         function(server_name)
@@ -107,7 +107,18 @@ require('mason-lspconfig').setup({
         end
     },
 })
+require('mason-nvim-dap').setup({
+    ensure_installed = {
+        "codelldb",
+        "cpptools",
+    },
 
+    handlers = {
+        function(config)
+            require('mason-nvim-dap').default_setup(config)
+        end,
+    }
+})
 
 -- Disable messages at the end of lines
 vim.diagnostic.config({ virtual_text = false })

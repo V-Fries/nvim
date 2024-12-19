@@ -94,3 +94,5 @@ wireshark
 buf
 fmt
 acos
+vulkan
+lldb

@@ -39,15 +39,47 @@ return require('packer').startup(function(use)
     use('tpope/vim-fugitive')
     use('lewis6991/gitsigns.nvim')
 
+    -- LSP Support
+    use 'neovim/nvim-lspconfig'
+    -- LSP manager
+    use 'williamboman/mason.nvim'
+    use {
+        'williamboman/mason-lspconfig.nvim',
+        requires = {
+            { 'williamboman/mason.nvim' },
+            { 'neovim/nvim-lspconfig' },
+        }
+    }
+    -- Debugger
+    use 'mfussenegger/nvim-dap'
+    -- Debugger manager
+    use {
+        'jay-babu/mason-nvim-dap.nvim',
+        requires = {
+            { 'williamboman/mason.nvim' },
+            { 'mfussenegger/nvim-dap' },
+        }
+    }
+    -- Debugger virtual text
+    use {
+        'theHamsta/nvim-dap-virtual-text',
+        requires = {
+            { 'mfussenegger/nvim-dap' },
+        },
+    }
+    -- Debugger UI
+    use {
+        "rcarriga/nvim-dap-ui",
+        requires = {
+            "mfussenegger/nvim-dap",
+            "nvim-neotest/nvim-nio",
+        }, 
+    }
     -- Autocompletion
     use {
         'VonHeikemen/lsp-zero.nvim',
         branch = 'v4.x',
         requires = {
-            --- Uncomment these if you want to manage LSP servers from neovim
-            {'williamboman/mason.nvim'},
-            {'williamboman/mason-lspconfig.nvim'},
-
             -- LSP Support
             {'neovim/nvim-lspconfig'},
             -- Autocompletion
@@ -97,7 +129,6 @@ return require('packer').startup(function(use)
 
     -- use 'github/copilot.vim'
 
-    -- -- Auto close blocks
-    use {'jiangmiao/auto-pairs'}
-    --
+    -- Auto close blocks
+    use 'jiangmiao/auto-pairs'
 end)
