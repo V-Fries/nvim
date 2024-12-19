@@ -73,7 +73,7 @@ return require('packer').startup(function(use)
         requires = {
             "mfussenegger/nvim-dap",
             "nvim-neotest/nvim-nio",
-        }, 
+        },
     }
     -- Autocompletion
     use {
@@ -127,7 +127,21 @@ return require('packer').startup(function(use)
     -- Spell checker
     use 'kamykn/spelunker.vim'
 
-    -- use 'github/copilot.vim'
+    -- github copilot
+    use 'zbirenbaum/copilot.lua'
+    use {
+        'zbirenbaum/copilot-cmp',
+        requires = {
+            { "zbirenbaum/copilot-cmp" },
+            {'hrsh7th/nvim-cmp'},
+        },
+        config = function()
+          require("copilot_cmp").setup()
+        end,
+    }
+
+    -- Icons for nvim-cmp
+    use 'onsails/lspkind.nvim'
 
     -- Auto close blocks
     use 'jiangmiao/auto-pairs'

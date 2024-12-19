@@ -18,7 +18,6 @@
 
 -- <leader>a: Selects a code action available at the current cursor position
 
-
 -- LSP
 local lsp_zero = require('lsp-zero')
 
@@ -52,7 +51,16 @@ local cmp = require('cmp')
 
 cmp.setup({
     sources = {
-        { name = 'nvim_lsp' },
+        { name = "copilot", group_index = 2 },
+        { name = 'nvim_lsp', group_index = 2 },
+        { name = 'path', group_index = 2 }
+    },
+    formatting = {
+        format = require('lspkind').cmp_format({
+            mode = "symbol",
+            max_width = 50,
+            symbol_map = { Copilot = "" }
+        })
     },
     snippet = {
         expand = function(args)
