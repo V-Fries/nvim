@@ -1,8 +1,9 @@
-vim.cmd'hi!         Normal                              guifg=#ffffff   guibg=#1e1e1e   guisp=None'
+-- vim.cmd'hi!         Normal                              guifg=#ffffff   guibg=#15191e   guisp=None'
+vim.cmd'hi!         Normal                              guifg=#ffffff   guibg=None   guisp=None'
 
-vim.cmd'hi!         CursorLine                          guifg=None      guibg=#303030   guisp=None'
+vim.cmd'hi!         CursorLine                          guifg=None      guibg=#252530   guisp=None'
 
-vim.cmd'hi!         ColorColumn                         guifg=None      guibg=#4d4d4d   guisp=None'
+vim.cmd'hi!         ColorColumn                         guifg=None      guibg=#202025   guisp=None'
 
 vim.cmd'hi!         WinSeparator                        guifg=#323232   guibg=#323232   guisp=None'
 vim.cmd'hi!         StatusLine                          guifg=#999999   guibg=#323232   guisp=None'
@@ -48,5 +49,10 @@ vim.cmd'hi! link    @type.builtin                       Type'
 vim.cmd'hi! link    @variable.member                    Identifier'
 
 vim.cmd'hi!         @lsp.mod.unsafe                     guifg=None      guibg=#4d3e3e   guisp=None'
-vim.cmd'hi!         @lsp.typemod.keyword.unsafe         guifg=None  guibg=#1e1e1e   guisp=None'
-vim.cmd'hi!         @lsp.typemod.function.declaration   guifg=None guibg=#1e1e1e guisp=None'
+vim.cmd'hi!         @lsp.typemod.keyword.unsafe         guifg=None      guibg=#15191e   guisp=None'
+vim.cmd'hi!         @lsp.typemod.function.declaration   guifg=None      guibg=#15191e   guisp=None'
+
+vim.cmd'hi! link    @tag.heex                           Keyword'
+vim.cmd'hi! link    @string.special                     String'
+vim.cmd'hi! link    @tag.delimiter                      Keyword'
+vim.cmd'hi! link    @tag.attribute                      Constant'

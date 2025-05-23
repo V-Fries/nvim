@@ -26,11 +26,11 @@ return require('packer').startup(function(use)
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.4',
         -- or                            , branch = '0.1.x',
-        requires = { {'nvim-lua/plenary.nvim'} }
+        requires = { { 'nvim-lua/plenary.nvim' } }
     }
 
     -- Syntax highlighting
-    use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
+    use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
 
     -- File modification history
     use('mbbill/undotree')
@@ -81,10 +81,10 @@ return require('packer').startup(function(use)
         branch = 'v4.x',
         requires = {
             -- LSP Support
-            {'neovim/nvim-lspconfig'},
+            { 'neovim/nvim-lspconfig' },
             -- Autocompletion
-            {'hrsh7th/nvim-cmp'},
-            {'hrsh7th/cmp-nvim-lsp'},
+            { 'hrsh7th/nvim-cmp' },
+            { 'hrsh7th/cmp-nvim-lsp' },
         }
     }
 
@@ -92,16 +92,16 @@ return require('packer').startup(function(use)
     use {
         'simonmclean/triptych.nvim',
         requires = {
-            'nvim-lua/plenary.nvim', -- required
-            'nvim-tree/nvim-web-devicons', -- optional for icons
+            'nvim-lua/plenary.nvim',              -- required
+            'nvim-tree/nvim-web-devicons',        -- optional for icons
             'antosha417/nvim-lsp-file-operations' -- optional LSP integration
         },
     }
 
     -- Terminal
-    use {"akinsho/toggleterm.nvim", tag = '*', config = function()
+    use { "akinsho/toggleterm.nvim", tag = '*', config = function()
         require("toggleterm").setup()
-    end}
+    end }
 
     -- Auto saver
     use 'pocco81/auto-save.nvim'
@@ -127,22 +127,27 @@ return require('packer').startup(function(use)
     -- Spell checker
     use 'kamykn/spelunker.vim'
 
-    -- github copilot
-    use 'zbirenbaum/copilot.lua'
-    use {
-        'zbirenbaum/copilot-cmp',
-        requires = {
-            { "zbirenbaum/copilot-cmp" },
-            {'hrsh7th/nvim-cmp'},
-        },
-        config = function()
-          require("copilot_cmp").setup()
-        end,
-    }
+    -- -- github copilot
+    -- use 'zbirenbaum/copilot.lua'
+    -- use {
+    --     'zbirenbaum/copilot-cmp',
+    --     requires = {
+    --         { "zbirenbaum/copilot-cmp" },
+    --         { 'hrsh7th/nvim-cmp' },
+    --     },
+    --     config = function()
+    --         require("copilot_cmp").setup()
+    --     end,
+    -- }
 
     -- Icons for nvim-cmp
     use 'onsails/lspkind.nvim'
 
     -- Auto close blocks
     use 'jiangmiao/auto-pairs'
+
+    use {
+        'folke/flash.nvim',
+        opts = {},
+    }
 end)

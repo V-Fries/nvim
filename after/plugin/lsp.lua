@@ -51,9 +51,9 @@ local cmp = require('cmp')
 
 cmp.setup({
     sources = {
-        { name = "copilot", group_index = 2 },
+        { name = "copilot",  group_index = 2 },
         { name = 'nvim_lsp', group_index = 2 },
-        { name = 'path', group_index = 2 }
+        { name = 'path',     group_index = 2 }
     },
     formatting = {
         format = require('lspkind').cmp_format({
@@ -109,10 +109,29 @@ require('mason-lspconfig').setup({
                 }
             })
         end,
+
         zls = function()
             require('lspconfig').zls.setup({})
             vim.g.zig_fmt_autosave = 0
-        end
+        end,
+
+        elixirls = function()
+            require('lspconfig').elixirls.setup({
+                settings = {
+                    elixirLS = {
+                        incrementalDialyzer = true,
+                        dialyzerEnabled = true,
+                        dialyzerWarnOpts = {
+                            "unmatched_returns",
+                            "missing_return"
+                        },
+                        fetchDeps = false,
+                        enableTestLenses = false,
+                        suggestSpecs = true,
+                    }
+                }
+            })
+        end,
     },
 })
 require('mason-nvim-dap').setup({
@@ -129,4 +148,4 @@ require('mason-nvim-dap').setup({
 })
 
 -- Disable messages at the end of lines
-vim.diagnostic.config({ virtual_text = false })
+-- vim.diagnostic.config({ virtual_text = false })

@@ -21,7 +21,15 @@ vim.g.mapleader = " "
 
 -- Escape insert mode
 vim.keymap.set("i", "jk", "<Esc>")
+vim.keymap.set("i", "Jk", "<Esc>")
+vim.keymap.set("i", "jK", "<Esc>")
+vim.keymap.set("i", "JK", "<Esc>")
+
+-- Escape visual mode
 vim.keymap.set("v", "jk", "<Esc>")
+vim.keymap.set("v", "Jk", "<Esc>")
+vim.keymap.set("v", "jK", "<Esc>")
+vim.keymap.set("v", "JK", "<Esc>")
 
 -- When lines are selected they can be moved by pressed move keys in uppercase
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
@@ -33,6 +41,15 @@ vim.keymap.set("v", "<C-k>", "<C-u>zz")
 vim.keymap.set("n", "<C-j>", "<C-d>zz")
 vim.keymap.set("v", "<C-j>", "<C-d>zz")
 
+-- Have j and k navigate visual lines rather than logical ones (useful when line doesn't fit on
+-- screen)
+vim.keymap.set("n", "j", "gj")
+vim.keymap.set("n", "k", "gk")
+
+-- -- Keep cursor centered
+-- vim.keymap.set("n", "j", "jzz")
+-- vim.keymap.set("n", "k", "kzz")
+
 -- Keep search terms in the middle
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
@@ -41,10 +58,13 @@ vim.keymap.set("n", "N", "Nzzzv")
 vim.keymap.set("x", "p", [["_dp]])
 
 -- If copy with leader before, copies to os clipboard
-vim.keymap.set("n", "<leader>y", "\"+y")
-vim.keymap.set("v", "<leader>y", "\"+y")
-vim.keymap.set("n", "<leader>Y", "\"+Y")
-vim.keymap.set("v", "<leader>Y", "\"+Y")
+-- vim.keymap.set("n", "<leader>y", "\"+y")
+-- vim.keymap.set("v", "<leader>y", "\"+y")
+-- vim.keymap.set("n", "<leader>Y", "\"+Y")
+-- vim.keymap.set("v", "<leader>Y", "\"+Y")
+
+-- Yank to os clipboard
+vim.opt.clipboard = 'unnamedplus'
 
 -- Replace all occurences of the word on cursor
 -- vim.keymap.set("n", "<leader>d", [[:%s/\<<C-r><C-w>\>//gI<Left><Left><Left>]])
@@ -113,3 +133,8 @@ end)
 vim.keymap.set('n', '<leader>rc', function()
     vim.cmd('!cargo clippy')
 end)
+
+vim.keymap.set('n', "<leader>E", ":Ex<CR>")
+
+vim.keymap.set('n', '<Leader>c', function() require("vfries.utils.switch_case").switch_case() end,
+    { noremap = true, silent = true })

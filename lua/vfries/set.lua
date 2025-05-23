@@ -27,8 +27,8 @@ vim.opt.incsearch = true
 
 vim.opt.termguicolors = true
 
--- Never have the cursor at the edge of the screen
-vim.opt.scrolloff = 5
+-- Number of lines to keep at the edge of the screen
+vim.opt.scrolloff = 20
 
 -- Make lines after file content be empty
 vim.opt.fillchars = { eob = " " }
