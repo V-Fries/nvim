@@ -42,7 +42,7 @@ vim.o.updatetime = 500
 -- Add a vertical column at n char
 vim.opt.colorcolumn = "100"
 
-vim.cmd'colorscheme riescent'
+vim.cmd'colorscheme theme'
 
 vim.cmd'set nospell'
 
