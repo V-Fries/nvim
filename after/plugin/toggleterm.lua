@@ -22,10 +22,6 @@ vim.keymap.set("n", "<leader>tj",
 vim.keymap.set("n", "<leader>tl",
     "<Cmd>ToggleTerm size=80 dir=. direction=vertical name=project<CR>"
 )
-
-
-
-
-vim.keymap.set("n", "<leader>tf",
+vim.keymap.set("n", "<leader>tk",
     "<Cmd>ToggleTerm dir=. direction=float name=project<CR>"
 )

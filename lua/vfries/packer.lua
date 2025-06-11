@@ -127,18 +127,18 @@ return require('packer').startup(function(use)
     -- Spell checker
     use 'kamykn/spelunker.vim'
 
-    -- -- github copilot
-    -- use 'zbirenbaum/copilot.lua'
-    -- use {
-    --     'zbirenbaum/copilot-cmp',
-    --     requires = {
-    --         { "zbirenbaum/copilot-cmp" },
-    --         { 'hrsh7th/nvim-cmp' },
-    --     },
-    --     config = function()
-    --         require("copilot_cmp").setup()
-    --     end,
-    -- }
+    -- github copilot
+    use 'zbirenbaum/copilot.lua'
+    use {
+        'zbirenbaum/copilot-cmp',
+        requires = {
+            { "zbirenbaum/copilot-cmp" },
+            { 'hrsh7th/nvim-cmp' },
+        },
+        config = function()
+            require("copilot_cmp").setup()
+        end,
+    }
 
     -- Icons for nvim-cmp
     use 'onsails/lspkind.nvim'
