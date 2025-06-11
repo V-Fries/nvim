@@ -1,4 +1,6 @@
 -- Auto closes blocks () {} "" etc
 return {
-    'jiangmiao/auto-pairs'
+    'windwp/nvim-autopairs',
+    event = "InsertEnter",
+    opts = {},
 }
