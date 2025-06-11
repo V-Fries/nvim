@@ -29,7 +29,11 @@ return {
 
     opts = {
         options = {
-            show_hidden = true
+            show_hidden = true,
+            line_numbers = {
+                enabled = true,
+                relative = true,
+            },
         }
     },
 
