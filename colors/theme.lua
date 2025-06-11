@@ -52,6 +52,9 @@ vim.cmd'hi!         @lsp.mod.unsafe                     guifg=None      guibg=#4
 vim.cmd'hi!         @lsp.typemod.keyword.unsafe         guifg=None      guibg=#15191e   guisp=None'
 vim.cmd'hi!         @lsp.typemod.function.declaration   guifg=None      guibg=#15191e   guisp=None'
 
+-- Set to comments to None to let treesitter do it's thing (i.e highlight TODO comments)
+vim.cmd'hi!         @lsp.type.comment                   guifg=None      guibg=None      guisp=None'
+
 vim.cmd'hi! link    @tag.heex                           Keyword'
 vim.cmd'hi! link    @string.special                     String'
 vim.cmd'hi! link    @tag.delimiter                      Keyword'
