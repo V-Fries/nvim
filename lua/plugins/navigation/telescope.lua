@@ -26,7 +26,7 @@ return {
         { "<leader>o", function() require("telescope.builtin").find_files() end, mode = "n" },
         { "<leader>O", function() require("telescope.builtin").git_files() end, mode = "n" },
         {
-            "<leader>f",
+            "<leader>s",
             function()
                 require("telescope.builtin").grep_string({ search = vim.fn.input("Find > ") })
             end,
