@@ -23,14 +23,13 @@ return {
     },
 
     keys = {
-        { "<leader>o", function() require("telescope.builtin").find_files() end, mode = "n" },
-        { "<leader>O", function() require("telescope.builtin").git_files() end, mode = "n" },
+        { "<leader>o", function() require("telescope.builtin").find_files() end },
+        { "<leader>O", function() require("telescope.builtin").git_files() end },
         {
             "<leader>s",
             function()
                 require("telescope.builtin").grep_string({ search = vim.fn.input("Find > ") })
             end,
-            mode = "n"
         }
     }
 }
