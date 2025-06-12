@@ -8,19 +8,16 @@ return {
         },
     },
     keys = {
-         { 'm', function() require('flash').jump() end, 'n' },
-         { 'm', function() require('flash').jump() end, 'x' },
-         { 'm', function() require('flash').jump() end, 'o' },
+         { 'm', function() require('flash').jump() end, mode = { 'n', 'x', 'o' } },
 
         -- {  'S', function() require('flash').treesitter() end, 'n' },
         -- {  'S', function() require('flash').treesitter() end, 'x' },
         -- {  'S', function() require('flash').treesitter() end, 'o' },
 
-         { 'r', function() require('flash').remote() end, 'o' },
+         { 'r', function() require('flash').remote() end, mode = 'o' },
 
-         { 'R', function() require('flash').treesitter_search() end, 'o' },
-         { 'R', function() require('flash').treesitter_search() end, 'x' },
+         { 'R', function() require('flash').treesitter_search() end, mode = { 'o', 'x' } },
 
-         { '<c-s>', function() require('flash').toggle() end, 'c' },
+         { '<c-s>', function() require('flash').toggle() end, mode = 'c' },
     },
 }
