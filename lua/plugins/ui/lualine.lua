@@ -1,59 +1,74 @@
-local my_colors = { bg = '#15191e', fg = '#999999', gui = 'bold' }
+-- local my_colors = { bg = '#15191e', fg = '#999999', gui = 'bold' }
+--
+-- local my_theme = {
+--     normal = {
+--         a = my_colors,
+--         b = my_colors,
+--         c = my_colors,
+--         x = my_colors,
+--         y = my_colors,
+--         z = my_colors,
+--     }
+-- }
+--
+-- return {
+--     'nvim-lualine/lualine.nvim',
+--     dependencies = {
+--         { 'nvim-tree/nvim-web-devicons', opts = {} },
+--     },
+--     opts = {
+--         options = {
+--             icons_enabled = true,
+--             theme = my_theme,
+--             component_separators = { left = '', right = ''},
+--             section_separators = { left = '', right = ''},
+--             disabled_filetypes = {
+--                 statusline = {},
+--                 winbar = {},
+--             },
+--             ignore_focus = {},
+--             always_divide_middle = true,
+--             globalstatus = false,
+--             refresh = {
+--                 statusline = 1000,
+--                 tabline = 1000,
+--                 winbar = 1000,
+--             },
+--         },
+--         sections = {
+--             lualine_a = { { 'filename', path = 1 } },
+--             lualine_b = {},
+--             lualine_c = {},
+--             lualine_x = {},
+--             lualine_y = {'lsp_status'},
+--             lualine_z = {'location'},
+--         },
+--         inactive_sections = {
+--             lualine_a = { { 'filename', path = 1 } },
+--             lualine_b = {},
+--             lualine_c = {},
+--             lualine_x = {},
+--             lualine_y = {'lsp_status'},
+--             lualine_z = {'location'},
+--         },
+--         tabline = {},
+--         winbar = {},
+--         inactive_winbar = {},
+--         extensions = {},
+--     },
+-- }
+return {}
 
-local my_theme = {
-    normal = {
-        a = my_colors,
-        b = my_colors,
-        c = my_colors,
-        x = my_colors,
-        y = my_colors,
-        z = my_colors,
-    }
-}
-
-return {
-    'nvim-lualine/lualine.nvim',
-    dependencies = {
-        { 'nvim-tree/nvim-web-devicons', opts = {} },
-    },
-    opts = {
-        options = {
-            icons_enabled = true,
-            theme = my_theme,
-            component_separators = { left = '', right = ''},
-            section_separators = { left = '', right = ''},
-            disabled_filetypes = {
-                statusline = {},
-                winbar = {},
-            },
-            ignore_focus = {},
-            always_divide_middle = true,
-            globalstatus = false,
-            refresh = {
-                statusline = 1000,
-                tabline = 1000,
-                winbar = 1000,
-            },
-        },
-        sections = {
-            lualine_a = { { 'filename', path = 1 } },
-            lualine_b = {},
-            lualine_c = {},
-            lualine_x = {},
-            lualine_y = {'lsp_status'},
-            lualine_z = {'location'},
-        },
-        inactive_sections = {
-            lualine_a = { { 'filename', path = 1 } },
-            lualine_b = {},
-            lualine_c = {},
-            lualine_x = {},
-            lualine_y = {'lsp_status'},
-            lualine_z = {'location'},
-        },
-        tabline = {},
-        winbar = {},
-        inactive_winbar = {},
-        extensions = {},
-    },
-}
+-- TODO try changing this
+-- events = {
+--         'WinEnter',
+--         'BufEnter',
+--         'BufWritePost',
+--         'SessionLoadPost',
+--         'FileChangedShellPost',
+--         'VimResized',
+--         'Filetype',
+--         'CursorMoved',
+--         'CursorMovedI',
+--         'ModeChanged',
+--       },
