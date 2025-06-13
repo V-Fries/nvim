@@ -35,11 +35,11 @@ vim.keymap.set("v", "JK", "<Esc>")
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
--- Jump half page with
-vim.keymap.set("n", "<C-k>", "<C-u>zz")
-vim.keymap.set("v", "<C-k>", "<C-u>zz")
-vim.keymap.set("n", "<C-j>", "<C-d>zz")
-vim.keymap.set("v", "<C-j>", "<C-d>zz")
+-- Center cursor when moving up and down
+vim.keymap.set("n", "<C-u>", "<C-u>zz")
+vim.keymap.set("v", "<C-u>", "<C-u>zz")
+vim.keymap.set("n", "<C-d>", "<C-d>zz")
+vim.keymap.set("v", "<C-d>", "<C-d>zz")
 
 -- Have j and k navigate visual lines rather than logical ones (useful when line doesn't fit on
 -- screen)
@@ -92,13 +92,13 @@ vim.keymap.set('n', "<C-=>", ":vertical resize +1<CR>")
 vim.keymap.set('n', "<C-0>", ":vertical resize -1<CR>")
 
 -- go to right split
-vim.keymap.set('n', "<leader>l", "<C-w>l")
+vim.keymap.set('n', "<C-l>", "<C-w>l", { noremap = true })
 -- go to bottom split
-vim.keymap.set('n', "<leader>j", "<C-w>j")
+vim.keymap.set('n', "<C-j>", "<C-w>j", { noremap = true })
 -- go to left split
-vim.keymap.set('n', "<leader>h", "<C-w>h")
+vim.keymap.set('n', "<C-h>", "<C-w>h", { noremap = true })
 -- go to top split
-vim.keymap.set('n', "<leader>k", "<C-w>k")
+vim.keymap.set('n', "<C-k>", "<C-w>k", { noremap = true })
 
 -- close tab
 vim.keymap.set('n', "<leader>w", "<Cmd>q<CR>")
@@ -136,9 +136,6 @@ end)
 
 vim.keymap.set('n', "<leader>E", ":Ex<CR>")
 
-vim.keymap.set('n', '<Leader>c', function() require("vfries.utils.switch_case").switch_case() end,
-    { noremap = true, silent = true })
-
 vim.keymap.set('n', 'K', '<cmd>lua vim.lsp.buf.hover()<cr>')
 vim.keymap.set('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<cr>')
 vim.keymap.set('n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<cr>')
@@ -149,4 +146,3 @@ vim.keymap.set('n', 'gs', '<cmd>lua vim.lsp.buf.signature_help()<cr>')
 vim.keymap.set('n', '<leader>lr', '<cmd>lua vim.lsp.buf.rename()<cr>')
 vim.keymap.set({ 'n', 'x' }, '<leader>lf', '<cmd>lua vim.lsp.buf.format({async = true})<cr>')
 vim.keymap.set('n', '<leader>a', '<cmd>lua vim.lsp.buf.code_action()<cr>')
-
