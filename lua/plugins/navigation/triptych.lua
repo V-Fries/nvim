@@ -2,8 +2,9 @@
 
 return {
     'simonmclean/triptych.nvim',
+    lazy = false,
     dependencies = {
-        'nvim-lua/plenary.nvim', -- required
+        'nvim-lua/plenary.nvim',       -- required
         'nvim-tree/nvim-web-devicons', -- optional for icons
         {
             -- optional LSP integration
@@ -40,4 +41,22 @@ return {
     keys = {
         { '<leader>e', ':Triptych<CR>' },
     },
+
+    init = function()
+        vim.api.nvim_create_autocmd("VimEnter", {
+            callback = function()
+                local argv = vim.fn.argv()
+                if #argv == 1 then
+                    local stat = vim.loop.fs_stat(argv[1])
+                    if stat and stat.type == "directory" then
+                        vim.cmd("Triptych")
+                    end
+                    return
+                end
+                if #argv == 0 and vim.fn.isdirectory(vim.fn.getcwd()) == 1 then
+                    vim.cmd("Triptych")
+                end
+            end
+        })
+    end,
 }
