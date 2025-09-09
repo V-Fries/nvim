@@ -1,12 +1,13 @@
 -- vim.cmd'hi!         Normal                              guifg=#ffffff   guibg=#15191e   guisp=None'
-vim.cmd'hi!         Normal                              guifg=#ffffff   guibg=None   guisp=None'
+vim.cmd'hi!         Normal                              guifg=#ffffff   guibg=None      guisp=None'
 
 vim.cmd'hi!         CursorLine                          guifg=None      guibg=#252530   guisp=None'
 
 vim.cmd'hi!         ColorColumn                         guifg=None      guibg=#202025   guisp=None'
 
-vim.cmd'hi!         WinSeparator                        guifg=#323232   guibg=#323232   guisp=None'
-vim.cmd'hi!         StatusLine                          guifg=#999999   guibg=#323232   guisp=None'
+vim.cmd'hi!         WinSeparator                        guifg=#323232   guibg=None      guisp=None'
+-- vim.cmd'hi!         StatusLine                          guifg=#999999   guibg=#323232   guisp=None'
+vim.cmd'hi!         StatusLine                          guifg=#999999   guibg=None      guisp=None'
 vim.cmd'hi! link    StatusLineNC                        StatusLine'
 
 

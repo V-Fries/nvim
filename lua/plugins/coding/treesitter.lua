@@ -5,7 +5,7 @@ return {
     build = ":TSUpdate",
 
     -- Using config = ... instead of opts because it failed guessing the name of module
-    config = function() 
+    config = function()
         require("nvim-treesitter.configs").setup({
             -- A list of parser names, or "all" (the five listed parsers should always be installed)
             -- I put all here because it took me way too long to find out about the comment parser

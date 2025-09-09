@@ -99,6 +99,16 @@ vim.keymap.set('n', "<C-j>", "<C-w>j", { noremap = true })
 vim.keymap.set('n', "<C-h>", "<C-w>h", { noremap = true })
 -- go to top split
 vim.keymap.set('n', "<C-k>", "<C-w>k", { noremap = true })
+--
+-- go to right split
+vim.keymap.set('n', "<space>l", "<C-w>l", { noremap = true })
+-- go to bottom split
+vim.keymap.set('n', "<space>j", "<C-w>j", { noremap = true })
+-- go to left split
+vim.keymap.set('n', "<space>h", "<C-w>h", { noremap = true })
+-- go to top split
+vim.keymap.set('n', "<space>k", "<C-w>k", { noremap = true })
+
 
 -- close tab
 vim.keymap.set('n', "<leader>w", "<Cmd>q<CR>")
