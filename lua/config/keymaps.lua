@@ -126,24 +126,6 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 -- open last closed tab
 vim.keymap.set('n', "<leader>b", "<C-6>")
 
--- open code action
-vim.keymap.set('n', "<leader>a", function()
-    vim.lsp.buf.code_action()
-end)
-
-vim.keymap.set('n', '<leader>rf', function()
-    if vim.bo.filetype ~= "rust" then
-        return
-    end
-    vim.cmd("write")
-    vim.fn.system("cargo fmt")
-    vim.cmd("edit")
-end)
-
-vim.keymap.set('n', '<leader>rc', function()
-    vim.cmd('!cargo clippy')
-end)
-
 vim.keymap.set('n', "<leader>E", ":Ex<CR>")
 
 vim.keymap.set('n', 'K', '<cmd>lua vim.lsp.buf.hover()<cr>')
